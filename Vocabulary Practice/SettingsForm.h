@@ -15,9 +15,9 @@ namespace VocabularyPractice {
 	{
 	private: System::Windows::Forms::CheckBox^ checkBoxRandomReverse;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::CheckBox^ checkBoxCheckCorrectness;
 
-	private: System::Windows::Forms::Label^ label5;
+
+
 	private: array<bool>^ boolArr;
 		     array<wchar_t>^ divider;
 	public:
@@ -75,8 +75,6 @@ namespace VocabularyPractice {
 			this->checkBoxReverse = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBoxRandomReverse = (gcnew System::Windows::Forms::CheckBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->checkBoxCheckCorrectness = (gcnew System::Windows::Forms::CheckBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBoxDivider
@@ -153,31 +151,11 @@ namespace VocabularyPractice {
 			this->label4->TabIndex = 13;
 			this->label4->Text = L"Randomize Reverse";
 			// 
-			// checkBoxCheckCorrectness
-			// 
-			this->checkBoxCheckCorrectness->AutoSize = true;
-			this->checkBoxCheckCorrectness->Location = System::Drawing::Point(129, 140);
-			this->checkBoxCheckCorrectness->Name = L"checkBoxCheckCorrectness";
-			this->checkBoxCheckCorrectness->Size = System::Drawing::Size(15, 14);
-			this->checkBoxCheckCorrectness->TabIndex = 16;
-			this->checkBoxCheckCorrectness->UseVisualStyleBackColor = true;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(19, 141);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(97, 13);
-			this->label5->TabIndex = 15;
-			this->label5->Text = L"Check Correctness";
-			// 
 			// SettingsForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(182, 172);
-			this->Controls->Add(this->checkBoxCheckCorrectness);
-			this->Controls->Add(this->label5);
+			this->ClientSize = System::Drawing::Size(182, 139);
 			this->Controls->Add(this->checkBoxRandomReverse);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->checkBoxReverse);
@@ -187,7 +165,7 @@ namespace VocabularyPractice {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBoxDivider);
 			this->Name = L"SettingsForm";
-			this->Text = L"SettingsForm";
+			this->Text = L"Settings";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &SettingsForm::SettingsForm_FormClosing);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -204,7 +182,6 @@ namespace VocabularyPractice {
 		boolArr[0] = checkBoxShuffle->Checked;
 		boolArr[1] = checkBoxReverse->Checked;
 		boolArr[2] = checkBoxRandomReverse->Checked;
-		boolArr[3] = checkBoxCheckCorrectness->Checked;
 	}
 };
 }

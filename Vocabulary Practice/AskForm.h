@@ -27,7 +27,7 @@ namespace VocabularyPractice {
 		int currentPos;
 		wchar_t divider;
 
-	private: System::Windows::Forms::RichTextBox^ textBoxWord;
+
 	public:
 		AskForm(ListBox^ %incomingListBox, wchar_t incomingStr, array<bool>^ incomingBoolArr)
 		{
@@ -62,7 +62,9 @@ namespace VocabularyPractice {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBoxWord1;
+	private: System::Windows::Forms::TextBox^ textBoxWord;
+	protected:
+
 	protected:
 
 	protected:
@@ -92,23 +94,22 @@ namespace VocabularyPractice {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->textBoxWord1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxWord = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxAnswer = (gcnew System::Windows::Forms::TextBox());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnIncreaseFont = (gcnew System::Windows::Forms::Button());
 			this->btnDecreaseFont = (gcnew System::Windows::Forms::Button());
-			this->textBoxWord = (gcnew System::Windows::Forms::RichTextBox());
 			this->SuspendLayout();
 			// 
-			// textBoxWord1
+			// textBoxWord
 			// 
-			this->textBoxWord1->Location = System::Drawing::Point(15, 36);
-			this->textBoxWord1->Multiline = true;
-			this->textBoxWord1->Name = L"textBoxWord1";
-			this->textBoxWord1->ReadOnly = true;
-			this->textBoxWord1->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBoxWord1->Size = System::Drawing::Size(276, 175);
-			this->textBoxWord1->TabIndex = 0;
+			this->textBoxWord->Location = System::Drawing::Point(15, 36);
+			this->textBoxWord->Multiline = true;
+			this->textBoxWord->Name = L"textBoxWord";
+			this->textBoxWord->ReadOnly = true;
+			this->textBoxWord->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBoxWord->Size = System::Drawing::Size(500, 175);
+			this->textBoxWord->TabIndex = 0;
 			// 
 			// textBoxAnswer
 			// 
@@ -147,29 +148,18 @@ namespace VocabularyPractice {
 			this->btnDecreaseFont->UseVisualStyleBackColor = true;
 			this->btnDecreaseFont->Click += gcnew System::EventHandler(this, &AskForm::btnDecreaseFont_Click);
 			// 
-			// textBoxWord
-			// 
-			this->textBoxWord->DetectUrls = false;
-			this->textBoxWord->Location = System::Drawing::Point(315, 12);
-			this->textBoxWord->Name = L"textBoxWord";
-			this->textBoxWord->ReadOnly = true;
-			this->textBoxWord->Size = System::Drawing::Size(189, 162);
-			this->textBoxWord->TabIndex = 5;
-			this->textBoxWord->Text = L"";
-			// 
 			// AskForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(529, 261);
-			this->Controls->Add(this->textBoxWord);
 			this->Controls->Add(this->btnDecreaseFont);
 			this->Controls->Add(this->btnIncreaseFont);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->textBoxAnswer);
-			this->Controls->Add(this->textBoxWord1);
+			this->Controls->Add(this->textBoxWord);
 			this->Name = L"AskForm";
-			this->Text = L"AskForm";
+			this->Text = L"Asking";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &AskForm::AskForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &AskForm::AskForm_Load);
 			this->ResumeLayout(false);

@@ -175,7 +175,7 @@ namespace VocabularyPractice {
 			this->Controls->Add(this->textBoxDirectory);
 			this->Controls->Add(this->btnSelectFile);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Vocabulary Practice";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
