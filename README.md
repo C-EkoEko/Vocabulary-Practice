@@ -17,7 +17,7 @@ See the [example](https://github.com/C-EkoEko/Vocabulary-Practice/releases/downl
 2) Click **Select File**
 3) Choose your .txt file that contains words
 4) Choose the words to be asked (Remember if there is a line you dont want to select between to lines you want to select, you can just hold CTRL and click them separately)
-5) Adjust your settings (See [Settings](https://github.com/C-EkoEko/Vocabulary-Practice/edit/master/README.md#settings))
+5) Adjust your settings (See [Settings](https://github.com/C-EkoEko/Vocabulary-Practice#settings))
 6) Click **Start Asking**
 7) Think the meaning of the word appeared on the new window (yeah, just think)
 8) Click **Next** to see the meaning and jump to the next word
