@@ -31,3 +31,4 @@ See the [example](https://github.com/C-EkoEko/Vocabulary-Practice/releases/downl
 ## To-Do
 1) Add images
 2) Add **Other Features** part
+3) Change example links
